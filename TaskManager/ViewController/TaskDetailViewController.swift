@@ -16,7 +16,8 @@ final class TaskDetailViewController: UIViewController {
     let emailTF = UITextField()
     
     let phoneLabel = UILabel()
-    let phoneTF = UITextField()
+//    let phoneTF = UITextField()
+    let phoneTF = PhoneNumberTextField()
     
     let priceLabel = UILabel()
     let priceTF = UITextField()
@@ -158,10 +159,24 @@ final class TaskDetailViewController: UIViewController {
     }
         
     private func setupPhoneTF() {
-        view.addSubview(phoneTF)
+//        view.addSubview(phoneTF)
+//
+//        phoneTF.translatesAutoresizingMaskIntoConstraints = false
+//        phoneTF.placeholder = "Your Phone Number"
+//        phoneTF.keyboardType = .numberPad
+//        phoneTF.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
+//        phoneTF.borderStyle = .none
 
+//        NSLayoutConstraint.activate([
+//            phoneTF.topAnchor.constraint(equalTo: phoneLabel.bottomAnchor, constant: 8),
+//            phoneTF.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor, constant: 16),
+//            phoneTF.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor, constant: -16)
+//        ])
+        
+        view.addSubview(phoneTF)
+        
         phoneTF.translatesAutoresizingMaskIntoConstraints = false
-        phoneTF.placeholder = "Your Phone Number"
+        phoneTF.placeholder = "+ 7"
         phoneTF.keyboardType = .numberPad
         phoneTF.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
         phoneTF.borderStyle = .none
@@ -192,7 +207,7 @@ final class TaskDetailViewController: UIViewController {
         view.addSubview(priceTF)
 
         priceTF.translatesAutoresizingMaskIntoConstraints = false
-        priceTF.placeholder = "Enter Your Price"
+        priceTF.placeholder = "$"
         priceTF.keyboardType = .numberPad
         priceTF.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
         priceTF.borderStyle = .none
@@ -253,16 +268,11 @@ final class TaskDetailViewController: UIViewController {
             return false
         }
         
-        let regEx = "^\\d{3}-\\d{3}-\\d{4}$"
+        let regEx = "^((\\+7|7|\\+8|8)([0-9]){3}([0-9]){3}([0-9]){2}([0-9]){2})$"
+        
         let phoneTest = NSPredicate(format: "SELF MATCHES %@", regEx)
-        let result = phoneTest.evaluate(with: phone)
+        let result =  phoneTest.evaluate(with: phone)
         
-//        let PHONE_REGEX = "^((\\+7|7|\\+8|8)([0-9]){3}([0-9]){3}([0-9]){2}([0-9]){2})$"
-        
-//        let phoneTest = NSPredicate(format: "SELF MATCHES %@", PHONE_REGEX)
-//        let result =  phoneTest.evaluate(with: input)
-//        let result = phoneTest.evaluate(with: phone.replacingOccurrences(of: " ", with: ""))
-        print(result)
         return result
     }
     
@@ -271,7 +281,11 @@ final class TaskDetailViewController: UIViewController {
             return false
         }
         
-        return false
+        let regEx = "[0-9]{1,7}"
+        let priceTest = NSPredicate(format: "SELF MATCHES %@", regEx)
+        let result = priceTest.evaluate(with: price)
+        
+        return result
     }
     
     private func validateUserInput() -> Bool {

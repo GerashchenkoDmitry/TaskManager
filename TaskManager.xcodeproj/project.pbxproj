@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF72B7B327A4097000FBD7CE /* PhoneNumberTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF72B7B227A4097000FBD7CE /* PhoneNumberTextField.swift */; };
 		DF79ED7A27A1B18700305535 /* UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF79ED7927A1B18700305535 /* UITextFieldExtension.swift */; };
 		DF79ED8427A1C15000305535 /* UIViewConstroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF79ED8327A1C15000305535 /* UIViewConstroller.swift */; };
 		DF965FA6279F13DC0035F735 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF965FA5279F13DC0035F735 /* AppDelegate.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DF72B7B227A4097000FBD7CE /* PhoneNumberTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberTextField.swift; sourceTree = "<group>"; };
 		DF79ED7927A1B18700305535 /* UITextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldExtension.swift; sourceTree = "<group>"; };
 		DF79ED8327A1C15000305535 /* UIViewConstroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewConstroller.swift; sourceTree = "<group>"; };
 		DF965FA2279F13DC0035F735 /* TaskManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaskManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				DF965FC0279F2F2C0035F735 /* TaskTableViewCell.swift */,
+				DF72B7B227A4097000FBD7CE /* PhoneNumberTextField.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -182,6 +185,7 @@
 			files = (
 				DF965FBC279F1FA90035F735 /* Task.swift in Sources */,
 				DF965FC4279F3DAE0035F735 /* TaskDetailViewController.swift in Sources */,
+				DF72B7B327A4097000FBD7CE /* PhoneNumberTextField.swift in Sources */,
 				DF79ED8427A1C15000305535 /* UIViewConstroller.swift in Sources */,
 				DF79ED7A27A1B18700305535 /* UITextFieldExtension.swift in Sources */,
 				DF965FAA279F13DC0035F735 /* TaskTableViewController.swift in Sources */,
