@@ -228,13 +228,11 @@ final class TaskDetailViewController: UIViewController {
             return false
         }
         
-//        let regEx = "\\w{7,18}"
-        let regEx = "[A-Za-z]{7,18}"
+        let regEx = "[A-Za-z'`~\\s]{2,64}"
         let test = NSPredicate(format:"SELF MATCHES %@", regEx)
         let result = test.evaluate(with: name)
         
-        print(" validate user \(result)")
-        return test.evaluate(with: name)
+        return result
     }
     
     private func validateUserEmail() -> Bool {
@@ -246,8 +244,8 @@ final class TaskDetailViewController: UIViewController {
         let regEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
         let testEmail = NSPredicate(format:"SELF MATCHES %@", regEx)
         let result = testEmail.evaluate(with: email)
-        print(result)
-        return testEmail.evaluate(with: email)
+        
+        return result
     }
     
     private func validateUserPhone() -> Bool {
@@ -255,16 +253,15 @@ final class TaskDetailViewController: UIViewController {
             return false
         }
         
-//        let regEx = "^\\d{3}-\\d{3}-\\d{4}$"
-//        let phoneTest = NSPredicate(format: "SELF MATCHES %@", regEx)
-//
-//        return phoneTest.evaluate(with: phone)
+        let regEx = "^\\d{3}-\\d{3}-\\d{4}$"
+        let phoneTest = NSPredicate(format: "SELF MATCHES %@", regEx)
+        let result = phoneTest.evaluate(with: phone)
         
-        let PHONE_REGEX = "^((\\+7|7|\\+8|8)([0-9]){3}([0-9]){3}([0-9]){2}([0-9]){2})$"
+//        let PHONE_REGEX = "^((\\+7|7|\\+8|8)([0-9]){3}([0-9]){3}([0-9]){2}([0-9]){2})$"
         
-        let phoneTest = NSPredicate(format: "SELF MATCHES %@", PHONE_REGEX)
+//        let phoneTest = NSPredicate(format: "SELF MATCHES %@", PHONE_REGEX)
 //        let result =  phoneTest.evaluate(with: input)
-        let result = phoneTest.evaluate(with: phone.replacingOccurrences(of: " ", with: ""))
+//        let result = phoneTest.evaluate(with: phone.replacingOccurrences(of: " ", with: ""))
         print(result)
         return result
     }
