@@ -7,23 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF79ED7A27A1B18700305535 /* UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF79ED7927A1B18700305535 /* UITextFieldExtension.swift */; };
+		DF79ED8427A1C15000305535 /* UIViewConstroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF79ED8327A1C15000305535 /* UIViewConstroller.swift */; };
 		DF965FA6279F13DC0035F735 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF965FA5279F13DC0035F735 /* AppDelegate.swift */; };
 		DF965FA8279F13DC0035F735 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF965FA7279F13DC0035F735 /* SceneDelegate.swift */; };
-		DF965FAA279F13DC0035F735 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF965FA9279F13DC0035F735 /* ViewController.swift */; };
-		DF965FAD279F13DC0035F735 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF965FAB279F13DC0035F735 /* Main.storyboard */; };
+		DF965FAA279F13DC0035F735 /* TaskTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF965FA9279F13DC0035F735 /* TaskTableViewController.swift */; };
 		DF965FAF279F13E40035F735 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF965FAE279F13E40035F735 /* Assets.xcassets */; };
 		DF965FB2279F13E40035F735 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF965FB0279F13E40035F735 /* LaunchScreen.storyboard */; };
+		DF965FBC279F1FA90035F735 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF965FBB279F1FA90035F735 /* Task.swift */; };
+		DF965FC1279F2F2C0035F735 /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF965FC0279F2F2C0035F735 /* TaskTableViewCell.swift */; };
+		DF965FC4279F3DAE0035F735 /* TaskDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF965FC3279F3DAE0035F735 /* TaskDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DF79ED7927A1B18700305535 /* UITextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldExtension.swift; sourceTree = "<group>"; };
+		DF79ED8327A1C15000305535 /* UIViewConstroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewConstroller.swift; sourceTree = "<group>"; };
 		DF965FA2279F13DC0035F735 /* TaskManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaskManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF965FA5279F13DC0035F735 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DF965FA7279F13DC0035F735 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DF965FA9279F13DC0035F735 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		DF965FAC279F13DC0035F735 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DF965FA9279F13DC0035F735 /* TaskTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewController.swift; sourceTree = "<group>"; };
 		DF965FAE279F13E40035F735 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DF965FB1279F13E40035F735 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DF965FB3279F13E40035F735 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DF965FBB279F1FA90035F735 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		DF965FC0279F2F2C0035F735 /* TaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
+		DF965FC3279F3DAE0035F735 /* TaskDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +45,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DF79ED7C27A1B19500305535 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DF79ED7927A1B18700305535 /* UITextFieldExtension.swift */,
+				DF79ED8327A1C15000305535 /* UIViewConstroller.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		DF79ED7E27A1B1DD00305535 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DF965FA9279F13DC0035F735 /* TaskTableViewController.swift */,
+				DF965FC3279F3DAE0035F735 /* TaskDetailViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		DF79ED7F27A1B1F200305535 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DF965FBB279F1FA90035F735 /* Task.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DF79ED8127A1B1FF00305535 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DF965FC0279F2F2C0035F735 /* TaskTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		DF965F99279F13DC0035F735 = {
 			isa = PBXGroup;
 			children = (
@@ -58,8 +100,10 @@
 			children = (
 				DF965FA5279F13DC0035F735 /* AppDelegate.swift */,
 				DF965FA7279F13DC0035F735 /* SceneDelegate.swift */,
-				DF965FA9279F13DC0035F735 /* ViewController.swift */,
-				DF965FAB279F13DC0035F735 /* Main.storyboard */,
+				DF79ED7E27A1B1DD00305535 /* ViewController */,
+				DF79ED8127A1B1FF00305535 /* View */,
+				DF79ED7C27A1B19500305535 /* Extensions */,
+				DF79ED7F27A1B1F200305535 /* Model */,
 				DF965FAE279F13E40035F735 /* Assets.xcassets */,
 				DF965FB0279F13E40035F735 /* LaunchScreen.storyboard */,
 				DF965FB3279F13E40035F735 /* Info.plist */,
@@ -126,7 +170,6 @@
 			files = (
 				DF965FB2279F13E40035F735 /* LaunchScreen.storyboard in Resources */,
 				DF965FAF279F13E40035F735 /* Assets.xcassets in Resources */,
-				DF965FAD279F13DC0035F735 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,7 +180,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DF965FAA279F13DC0035F735 /* ViewController.swift in Sources */,
+				DF965FBC279F1FA90035F735 /* Task.swift in Sources */,
+				DF965FC4279F3DAE0035F735 /* TaskDetailViewController.swift in Sources */,
+				DF79ED8427A1C15000305535 /* UIViewConstroller.swift in Sources */,
+				DF79ED7A27A1B18700305535 /* UITextFieldExtension.swift in Sources */,
+				DF965FAA279F13DC0035F735 /* TaskTableViewController.swift in Sources */,
+				DF965FC1279F2F2C0035F735 /* TaskTableViewCell.swift in Sources */,
 				DF965FA6279F13DC0035F735 /* AppDelegate.swift in Sources */,
 				DF965FA8279F13DC0035F735 /* SceneDelegate.swift in Sources */,
 			);
@@ -146,14 +194,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		DF965FAB279F13DC0035F735 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DF965FAC279F13DC0035F735 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		DF965FB0279F13E40035F735 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
