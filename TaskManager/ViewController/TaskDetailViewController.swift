@@ -236,7 +236,6 @@ final class TaskDetailViewController: UIViewController {
         let regEx = "[A-Za-z'`~\\s]{2,64}"
         let test = NSPredicate(format:"SELF MATCHES %@", regEx)
         let result = test.evaluate(with: name)
-        print(result)
         return result
     }
     
@@ -249,8 +248,7 @@ final class TaskDetailViewController: UIViewController {
         let regEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
         let testEmail = NSPredicate(format:"SELF MATCHES %@", regEx)
         let result = testEmail.evaluate(with: email)
-        print(result)
-
+]
         return result
     }
     
@@ -261,7 +259,6 @@ final class TaskDetailViewController: UIViewController {
         
         let phoneTest = NSPredicate(format: "SELF MATCHES %@", regEx)
         let result =  phoneTest.evaluate(with: phone)
-        print(result)
 
         return result
     }
@@ -274,7 +271,6 @@ final class TaskDetailViewController: UIViewController {
         let regEx = "[0-9]{1,7}"
         let priceTest = NSPredicate(format: "SELF MATCHES %@", regEx)
         let result = priceTest.evaluate(with: price)
-        print(result)
 
         return result
     }
