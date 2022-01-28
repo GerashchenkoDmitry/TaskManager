@@ -161,19 +161,6 @@ final class TaskDetailViewController: UIViewController {
     }
         
     private func setupPhoneTF() {
-//        view.addSubview(phoneTF)
-//
-//        phoneTF.translatesAutoresizingMaskIntoConstraints = false
-//        phoneTF.placeholder = "Your Phone Number"
-//        phoneTF.keyboardType = .numberPad
-//        phoneTF.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
-//        phoneTF.borderStyle = .none
-
-//        NSLayoutConstraint.activate([
-//            phoneTF.topAnchor.constraint(equalTo: phoneLabel.bottomAnchor, constant: 8),
-//            phoneTF.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor, constant: 16),
-//            phoneTF.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor, constant: -16)
-//        ])
         
         view.addSubview(phoneTF)
         

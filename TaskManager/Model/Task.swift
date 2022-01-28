@@ -9,5 +9,4 @@ import Foundation
 
 struct Task {
     let title: String
-    
 }
