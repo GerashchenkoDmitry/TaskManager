@@ -16,13 +16,15 @@ final class TaskDetailViewController: UIViewController {
     let emailTF = UITextField()
     
     let phoneLabel = UILabel()
-//    let phoneTF = UITextField()
     let phoneTF = PhoneNumberTextField()
     
+    let priceTFDelegate = PriceTextFieldDelegate()
     let priceLabel = UILabel()
     let priceTF = UITextField()
     
     let sendButton = UIButton(type: .system)
+    
+    
     
     // MARK:- viewDidLoad
     
@@ -176,7 +178,7 @@ final class TaskDetailViewController: UIViewController {
         view.addSubview(phoneTF)
         
         phoneTF.translatesAutoresizingMaskIntoConstraints = false
-        phoneTF.placeholder = "+ 7"
+        phoneTF.text = "+7"
         phoneTF.keyboardType = .numberPad
         phoneTF.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
         phoneTF.borderStyle = .none
@@ -211,6 +213,7 @@ final class TaskDetailViewController: UIViewController {
         priceTF.keyboardType = .numberPad
         priceTF.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
         priceTF.borderStyle = .none
+        priceTF.delegate = priceTFDelegate
         
         NSLayoutConstraint.activate([
             priceTF.topAnchor.constraint(equalTo: priceLabel.bottomAnchor, constant: 8),
@@ -246,7 +249,7 @@ final class TaskDetailViewController: UIViewController {
         let regEx = "[A-Za-z'`~\\s]{2,64}"
         let test = NSPredicate(format:"SELF MATCHES %@", regEx)
         let result = test.evaluate(with: name)
-        
+        print(result)
         return result
     }
     
@@ -259,20 +262,20 @@ final class TaskDetailViewController: UIViewController {
         let regEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
         let testEmail = NSPredicate(format:"SELF MATCHES %@", regEx)
         let result = testEmail.evaluate(with: email)
-        
+        print(result)
+
         return result
     }
     
     private func validateUserPhone() -> Bool {
-        guard let phone = phoneTF.text else {
-            return false
-        }
+        let phone = phoneTF.rawPhoneNumber
         
         let regEx = "^((\\+7|7|\\+8|8)([0-9]){3}([0-9]){3}([0-9]){2}([0-9]){2})$"
         
         let phoneTest = NSPredicate(format: "SELF MATCHES %@", regEx)
         let result =  phoneTest.evaluate(with: phone)
-        
+        print(result)
+
         return result
     }
     
@@ -284,7 +287,8 @@ final class TaskDetailViewController: UIViewController {
         let regEx = "[0-9]{1,7}"
         let priceTest = NSPredicate(format: "SELF MATCHES %@", regEx)
         let result = priceTest.evaluate(with: price)
-        
+        print(result)
+
         return result
     }
     
