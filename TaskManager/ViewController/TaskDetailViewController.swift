@@ -248,7 +248,7 @@ final class TaskDetailViewController: UIViewController {
         let regEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
         let testEmail = NSPredicate(format:"SELF MATCHES %@", regEx)
         let result = testEmail.evaluate(with: email)
-]
+
         return result
     }
     
